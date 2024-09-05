@@ -736,7 +736,6 @@ body.dark .search-field i{
     height: 100%;
 }
 
-
 .services-dropdown {
     position: relative;
 }
@@ -746,9 +745,12 @@ body.dark .search-field i{
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: var(--nav-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     z-index: 1000;
+    min-width: 200px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .services-dropdown:hover .dropdown-menu {
@@ -756,16 +758,49 @@ body.dark .search-field i{
 }
 
 .dropdown-menu li {
-    width: 200px;
+    list-style: none;
 }
 
 .dropdown-menu a {
     display: block;
-    padding: 10px;
-    color: #333;
+    padding: 10px 15px;
+    color: var(--text-color);
     text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 .dropdown-menu a:hover {
-    background-color: #f5f5f5;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.services-dropdown > a {
+    display: flex;
+    align-items: center;
+}
+
+.services-dropdown > a i {
+    margin-left: 5px;
+}
+
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        display: none;
+        background-color: transparent;
+        box-shadow: none;
+        padding-left: 15px;
+        border: none;
+    }
+
+    .services-dropdown.active .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu a {
+        padding: 10px 0;
+    }
+
+    .services-dropdown > a {
+        justify-content: space-between;
+    }
 }
