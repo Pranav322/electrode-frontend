@@ -101,7 +101,7 @@ nav .nav-bar .logo a{
     list-style: none;
 }
 
-.nav-links li a{
+.nav-links li a {
     position: relative;
     font-size: 17px;
     font-weight: 400;
@@ -110,7 +110,7 @@ nav .nav-bar .logo a{
     padding: 10px;
 }
 
-.nav-links li a::before{
+.nav-links li a::before {
     content: '';
     position: absolute;
     left: 50%;
@@ -122,6 +122,7 @@ nav .nav-bar .logo a{
     background-color: var(--text-color);
     opacity: 0;
     transition: all 0.3s ease;
+    
 }
 
 .nav-links li:hover a::before{
@@ -152,6 +153,11 @@ nav .nav-bar .logo a{
     transition: all 0.3s ease;
 }
 
+
+.dropdown-menu li a::before,
+.dropdown-menu li:hover a::before {
+    display: none;
+}
 .dark-light i.sun{
     opacity: 0;
     pointer-events: none;
