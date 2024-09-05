@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+ 
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    </head>
+    <body>
+        <div id="main">
+        <div data-scroll data-scroll-speed="-5" id="page1">
+                <nav>
+                    <div class="nav-bar">
+                        <i class='bx bx-menu sidebarOpen' ></i>
+                        <span class="logo navLogo"><a href="#">ELECTRODE</a></span>
+                        <div class="menu">
+                            <div class="logo-toggle">
+                                <span class="logo"><a href="#">ELECTRODE</a></span>
+                                <i class='bx bx-x siderbarClose'></i>
+                            </div>
+                            <ul class="nav-links">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="Login/login.html">Login</a></li>
+                                <li><a href="wallet/wallet.html">Add Wallet</a></li>
+                                <li><a href="#">Services</a></li>
+                            </ul>
+                        </div>
+                        <div class="darkLight-searchBox">
+                            <div class="dark-light">
+                                <i class='bx bx-moon moon'></i>
+                                <i class='bx bx-sun sun'></i>
+                            </div>
+                            <div class="searchBox">
+                               <div class="searchToggle">
+                                <i class='bx bx-x cancel'></i>
+                                <i class='bx bx-search search'></i>
+                               </div>
+                                <div class="search-field">
+                                    <input type="text" placeholder="Search...">
+                                    <i class='bx bx-search'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="bottom-page1">
+                    <div class="heading-box">
+                <h1>Experience Honest <br> Digital Safety</h1>
+                </div><br>
+                <div class="bottom-page1-inner">
+                    <div class="text-box">
+                        <h3>We make it easy for utilities and their customers, to know the exact value of clean energy choices. We are the catalyst for our clean energy future.</h3>
+                    </div> 
+                <button class="learn-more-button">LEARN MORE</button>  
+                </div>
+            </div> 
+                <video src="images/video3.mp4" autoplay loop muted></video>
+
+        </div>  
+        <div id="page2">
+            
+<h1>Your Digital Vault:</h1><h2> Store sensitive documents and records with ironclad security measures.</h2><br>
+<h1>Digital Twin Tokens:</h1><h2> Create digital twin tokens for documents, ensuring authenticity and tamper-proofing.</h2><br>
+<h1>Blockchain Integration:</h1><h2> Harness the immutable power of blockchain for data integrity and transparency.</h2><br>
+<h1>Smart Contracts:</h1><h2> Streamline operations with smart contracts tailored to everyone's unique needs.</h2><br>
+            
+        </div> 
+        <div id="page3">
+            <canvas></canvas>
+        </div>
+        <div id="page4">
+            <h3>Revolutionizing Document Management with Blockchain Excellence</h3>
+            <h1>Welcome to DTT Vault, where the future of secure document management, digital transformation, and industry-specific solutions begins. Our innovative platform leverages blockchain technology to redefine how the legal, supply chain management (SCM), and healthcare sectors manage and fortify mission-critical data and documents.</h1>
+        </div>
+        <div id="page5">
+            <canvas></canvas>
+        </div>
+        <div id="page6">
+            <h3>INCREASE YOUR DIGITAL TWIN TOKEN'S VALUE</h3>
+            <h1>individuals can easily use the platform to manage personal documents, from IDs and passports to insurance policies and academic records.a technological vanguard, dedicated to pioneering innovation through blockchain mastery. Our mission is to empower businesses in the legal, SCM, and healthcare industries with secure, efficient, and compliance-oriented document management solutions.</h1>
+        </div>
+        <div id="page7">
+            <div class="page7-cir">
+                <div class="page7-cir-inner"></div>
+            </div>
+            <canvas></canvas>
+        </div>
+        <div id="page8">
+            <div class="page8-bottom">
+                <h1>DTT Vault</h1>
+                <button>LEARN MORE</button>
+            </div>
+            <style>
+               video {
+  max-width: 100%; 
+  display: block; 
+  margin: 0 auto; 
+}
+              </style>
+            <video src="images/v.mp4" autoplay loop muted></video>
+        </div>
+        <div id="page9">
+            <div class="left9">
+                <h1>What is <br> DTT Vault</h1>
+            </div>
+            <div class="right9">
+                <div class="right9-center"></div>
+            </div>
+        </div>
+        <div id="page14">
+            <div class="page14-inner">
+                <h1>Twitter</h1>
+                <i class="ri-arrow-right-up-line"></i>
+                <div class="center14"></div>
+            </div>
+            <div class="page14-inner">
+                <h1>LinkedIn</h1>
+                <i class="ri-arrow-right-up-line"></i>
+                <div class="center14"></div>
+
+            </div>
+            <div class="page14-inner">
+                <h1>Instagram</h1>
+                <i class="ri-arrow-right-up-line"></i>
+                <div class="center14"></div>
+
+            </div>
+        </div>
+        </div>
+
+
+
+
+        <script>
+            const body = document.querySelector("body"),
+                  nav = document.querySelector("nav"),
+                  modeToggle = document.querySelector(".dark-light"),
+                  searchToggle = document.querySelector(".searchToggle"),
+                  sidebarOpen = document.querySelector(".sidebarOpen"),
+                  siderbarClose = document.querySelector(".siderbarClose");
+                  let getMode = localStorage.getItem("mode");
+                      if(getMode && getMode === "dark-mode"){
+                        body.classList.add("dark");
+                      }
+            // js code to toggle dark and light mode
+                  modeToggle.addEventListener("click" , () =>{
+                    modeToggle.classList.toggle("active");
+                    body.classList.toggle("dark");
+                    // js code to keep user selected mode even page refresh or file reopen
+                    if(!body.classList.contains("dark")){
+                        localStorage.setItem("mode" , "light-mode");
+                    }else{
+                        localStorage.setItem("mode" , "dark-mode");
+                    }
+                  });
+            // js code to toggle search box
+                    searchToggle.addEventListener("click" , () =>{
+                    searchToggle.classList.toggle("active");
+                  });
+             
+                  
+            //   js code to toggle sidebar
+            sidebarOpen.addEventListener("click" , () =>{
+                nav.classList.add("active");
+            });
+            body.addEventListener("click" , e =>{
+                let clickedElm = e.target;
+                if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+                    nav.classList.remove("active");
+                }
+            });
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="script.js" ></script>
+    </body>
+</html>
